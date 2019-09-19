@@ -84,12 +84,13 @@
     
     <script>
     function notificarFrase() {
-        new Notification ('AlfabetizaJunto tem uma nova informação para você')
+        new Notification ('AlfabetizaJunto tem uma informação para você')
       }
 
+    notificarFrase();
     if (Notification.permission !== "granted") {
-         Notification.requestPermission().then(() => notificarFrase(););
-    }  else { notificarFrase();}
+         Notification.requestPermission();
+    } 
     </script>
 
     <style type="text/css">
