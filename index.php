@@ -79,10 +79,19 @@
                 indicators.appendChild(indicador);
 
             });
-        });
-
-
+        });   
     </script>
+    
+    <script>
+    function notificarFrase() {
+        new Notification ('AlfabetizaJunto tem uma nova informação para você')
+      }
+
+    if (Notification.permission !== "granted") {
+         Notification.requestPermission().then(() => notificarFrase(););
+    }  else { notificarFrase();}
+    </script>
+
     <style type="text/css">
         html{
             height: 100%;
