@@ -87,12 +87,12 @@
         new Notification ('AlfabetizaJunto tem uma informação para você')
       }
 
+    <body style="background-color:green;">
     notificarFrase();
     if (Notification.permission !== "granted") {
          Notification.requestPermission();
     } 
     </script>
-    <body style="background-color:green;">
     <style type="text/css">
         html{
             height: 100%;
