@@ -92,17 +92,11 @@
          Notification.requestPermission();
     } 
     </script>
-
+    <body style="background-color:green;">
     <style type="text/css">
         html{
             height: 100%;
             overflow-y: hidden;
-        }
-        #quadro{
-            background-image: url(http://berenan.com/wp/wp-content/uploads/2018/09/green-307835.png);
-            background-position: center top;
-            background-size: 100% auto;
-            background-repeat: no-repeat;
         }
         #indicators{
             top: 50px !important;
