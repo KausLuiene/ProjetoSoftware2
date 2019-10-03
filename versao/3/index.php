@@ -5,7 +5,7 @@
 <style>
 @font-face {
     font-family: myFirstFont;
-    src:url("/fontspace.com/kevin-richey/rudiment");
+    src:url("/fonts/Harlow_Solid_Italic.ttf");
 }
 
 .harlow{
@@ -24,7 +24,7 @@
 <body class="h-100">
 <div>With CSS3, websites can finally use fonts other than the pre selected "web-safe" fonts.</div>
 <p><b class="harlow">Note:</b> Internet Explorer 8 and earlier, do not support the @font-face rule with the WOFF format (only support for EOT format).</p>
-  <nav class="navbar navbar-expand-lg navbar-white bg-white text-black">
+  <nav class="navbar navbar-expand-lg navbar-green bg-dark text-white">
     <div class="container">
         <div class=" w-100 d-flex justify-content-between align-items-center">
             <h4 class="m-0">Alfabetiza Junto</h4>
