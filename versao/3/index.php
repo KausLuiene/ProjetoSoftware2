@@ -34,8 +34,8 @@
         </div> 
     </div>
 </nav>
-<div class="container h-100">
-    <div class="h-100 d-flex align-items-center pb-5 px-5"  id="quadro">
+<div class="container">
+    <div class="d-flex align-items-center pb-5 px-5"  id="quadro">
         <div id="carouselSite" class="position-relative h-100 carousel slide p-5 text-white text-justify d-flex align-items-center" data-ride = "carousel">
             <ol class="carousel-indicators" id="indicators"></ol>
             <div class="h-100 carousel-inner d-flex align-items-center" id="frases"></div>
