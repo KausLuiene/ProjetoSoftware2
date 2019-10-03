@@ -24,12 +24,12 @@
 <body class="h-100">
 <div>With CSS3, websites can finally use fonts other than the pre selected "web-safe" fonts.</div>
 <p><b class="harlow">Note:</b> Internet Explorer 8 and earlier, do not support the @font-face rule with the WOFF format (only support for EOT format).</p>
-  <nav class="navbar navbar-expand-lg navbar-green bg-dark text-white">
+  <nav class="navbar navbar-expand-lg navbar-black bg-dark text-white">
     <div class="container">
         <div class=" w-100 d-flex justify-content-between align-items-center">
             <h4 class="m-0">Alfabetiza Junto</h4>
-            <p class="m-0">
-                <strong></strong>
+            <p class="m-0">Está em busca de conhecimento sobre Alfabetização?
+                <strong>Veio no lugar certo.</strong>
             </p>
         </div> 
     </div>
@@ -93,13 +93,13 @@
         }
         #quadro{
             background-image: url(https://i.stack.imgur.com/pMAiU.jpg);
-            background-position: center top;
+            background-position: absolute;
             background-size: 100% auto;
             background-repeat: repeat;
         }
         #indicators{
-            top: 50px !important;
-            height: 50px;
+            top: 100px !important;
+            height: 100px;
         }
     </style>
 </body>
