@@ -93,9 +93,7 @@
         }
         #quadro{
             background-image: url(https://i.stack.imgur.com/pMAiU.jpg);
-            background-position: absolute;
-            background-size: 100% auto;
-            background-repeat: repeat;
+            background-repeat: repeat-y;
         }
         #indicators{
             top: 100px !important;
