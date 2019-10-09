@@ -23,7 +23,7 @@
         </div> 
     </div>
 </nav>
-<div class="d-flex align-items-center"  id="quadro">
+<div class="d-flex align-items-center h-100"  id="quadro">
     <div class="container">
         <div id="carouselSite" class="position-relative h-100 carousel slide p-5 text-justify d-flex align-items-center" data-ride = "carousel">
             <ol class="carousel-indicators" id="indicators"></ol>
@@ -85,12 +85,11 @@
         }
         #quadro{
             background-image: url(https://i.stack.imgur.com/pMAiU.jpg);
-            background-repeat: repeat-y;
         }
-        #indicators{
+        /* #indicators{
             top: 100px !important;
             height: 100px;
-        }
+        } */
     </style>
 </body>
 </html>
