@@ -25,7 +25,7 @@
 </nav>
 <div class="d-flex align-items-center h-100"  id="quadro">
     <div class="container">
-        <div id="carouselSite" class="position-relative h-100 carousel slide p-5 text-justify d-flex align-items-center" data-ride = "carousel">
+        <div id="carouselSite" class="position-relative h-100 carousel slide p-5 text-white text-justify d-flex align-items-center" data-ride = "carousel">
             <ol class="carousel-indicators" id="indicators"></ol>
             <div class="h-100 carousel-inner d-flex align-items-center" id="frases"></div>
             <a class="carousel-control-prev" href="#carouselSite" role="button" data-slide="prev">
