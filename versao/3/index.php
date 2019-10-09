@@ -2,29 +2,18 @@
 <html lang="pt-br">
 
 <head>
-<style>
-@font-face {
-    font-family: myFirstFont;
-    src:url("/fonts/Harlow_Solid_Italic.ttf");
-}
-
-.harlow{
-    font-family: myFirstFont;
-}
-</style>
   <meta charset="utf-8" />
   <title>AlfabetizaJunto</title>
   <base href="/" />
   <meta name="viewport" content="viewport-fit=cover, width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
   <meta name="format-detection" content="telephone=no" />
   <meta name="msapplication-tap-highlight" content="no" />
+  <link href="https://fonts.googleapis.com/css?family=Mansalva&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 </head>
 
 <body class="h-100">
-<div>With CSS3, websites can finally use fonts other than the pre selected "web-safe" fonts.</div>
-<p><b class="harlow">Note:</b> Internet Explorer 8 and earlier, do not support the @font-face rule with the WOFF format (only support for EOT format).</p>
-  <nav class="navbar navbar-expand-lg navbar-black bg-dark text-white">
+<nav class="navbar navbar-expand-lg navbar-black bg-dark text-white">
     <div class="container">
         <div class=" w-100 d-flex justify-content-between align-items-center">
             <h4 class="m-0">Alfabetiza Junto</h4>
@@ -36,7 +25,7 @@
 </nav>
 <div class="container">
     <div class="d-flex align-items-center pb-5 px-5"  id="quadro">
-        <div id="carouselSite" class="position-relative h-100 carousel slide p-5 text-white text-justify d-flex align-items-center" data-ride = "carousel">
+        <div id="carouselSite" class="position-relative h-100 carousel slide p-5 text-justify d-flex align-items-center" data-ride = "carousel">
             <ol class="carousel-indicators" id="indicators"></ol>
             <div class="h-100 carousel-inner d-flex align-items-center" id="frases"></div>
             <a class="carousel-control-prev" href="#carouselSite" role="button" data-slide="prev">
@@ -87,6 +76,9 @@
     </script>
     
     <style type="text/css">
+    body{
+        font-family: 'Mansalva', cursive;
+    }
         html{
             height: 100%;
             overflow-y: hidden;
