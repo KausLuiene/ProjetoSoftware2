@@ -8,22 +8,23 @@
   <meta name="viewport" content="viewport-fit=cover, width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
   <meta name="format-detection" content="telephone=no" />
   <meta name="msapplication-tap-highlight" content="no" />
+  <link href="https://fonts.googleapis.com/css?family=Mansalva&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 </head>
 
 <body class="h-100">
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark text-white">
+<nav class="navbar navbar-expand-lg navbar-black bg-dark text-white">
     <div class="container">
         <div class=" w-100 d-flex justify-content-between align-items-center">
             <h4 class="m-0">Alfabetiza Junto</h4>
-            <p class="m-0"> Está em busca de conhecimento sobre Alfabetização?
-                <strong> Aqui é o lugar certo.</strong>
+            <p class="m-0">Está em busca de conhecimento sobre Alfabetização?
+                <strong>Veio no lugar certo.</strong>
             </p>
         </div> 
     </div>
 </nav>
-<div class="container h-100">
-    <div class="h-100 d-flex align-items-center pb-5 px-5"  id="quadro">
+<div class="d-flex align-items-center h-100"  id="quadro">
+    <div class="container">
         <div id="carouselSite" class="position-relative h-100 carousel slide p-5 text-white text-justify d-flex align-items-center" data-ride = "carousel">
             <ol class="carousel-indicators" id="indicators"></ol>
             <div class="h-100 carousel-inner d-flex align-items-center" id="frases"></div>
@@ -51,15 +52,6 @@
         })
       .then(data => { //apos concluir a função do then anterior ele passa o resultado do response.json() pra variavel data, ou seja, o valor retornado da função anterior
             data.feed.entry.forEach((linha,index) => {  //data.feed.entry está acessando o objeto entry do objeto feed do objeto data, e para cada entry executa a função que está entre {} passando o valor de cada entry na variavel linha
-                // SAIBA MAIS
-                console.log(linha.gsx$fonte.$t);
-                let saibamais = document.createElement('a');
-                saibamais.setAttribute("id", 'linksaibamais');
-                saibamais.setAttribute("class", 'btn btn-primary mt-5');
-                saibamais.append('Saiba Mais');
-              // adiciona fonte
-              saibamais.setAttribute("href", linha.gsx$fonte.$t);
-
               let carousel_inner = document.createElement('div');
               let indicador = document.createElement('li');
               indicador.setAttribute("data-slide-to", index);
@@ -74,39 +66,32 @@
                 post.textContent = linha.gsx$post.$t; //coloca no texto do elemento h2 criado o valor da coluna post de cada linha, que é acessado por gsx$post.$t
                 // console.log(divFrases);
                 carousel_inner.append(post);
-                carousel_inner.appendChild(saibamais); //insere o elemento criado como filho do elemento div que está no body do html
                 divFrases.appendChild(carousel_inner); //insere o elemento criado como filho do elemento div que está no body do html
                 indicators.appendChild(indicador);
 
             });
-        });   
+        });
+
+
     </script>
     
-    <script>
-    function notificarFrase() {
-        new Notification ('AlfabetizaJunto tem uma informação para você')
-      }
-
-    <body style="background-color:green;">
-    notificarFrase();
-    if (Notification.permission !== "granted") {
-         Notification.requestPermission();
-    } 
-    </script>
     <style type="text/css">
+        body{
+            font-family: 'Mansalva', cursive;
+        }
         html{
             height: 100%;
             overflow-y: hidden;
         }
-        #indicators{
-            top: 50px !important;
-            height: 50px;
+        #quadro{
+            background-image: url(https://i.stack.imgur.com/pMAiU.jpg);
         }
-        #linksaibamais{
-            z-index: 10;
-            position: absolute;
+        .carousel-control-prev{
+            left: -100px;
+        }
+        .carousel-control-next{
+            right: -100px;
         }
     </style>
 </body>
-
 </html>

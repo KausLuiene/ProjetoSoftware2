@@ -76,9 +76,9 @@
     </script>
     
     <style type="text/css">
-    body{
-        font-family: 'Mansalva', cursive;
-    }
+        body{
+            font-family: 'Mansalva', cursive;
+        }
         html{
             height: 100%;
             overflow-y: hidden;
@@ -86,12 +86,12 @@
         #quadro{
             background-image: url(https://i.stack.imgur.com/pMAiU.jpg);
         }
-.carousel-control-prev{
-    left: -100px;
-}
-.carousel-control-next{
-    right: -100px;
-}
+        .carousel-control-prev{
+            left: -100px;
+        }
+        .carousel-control-next{
+            right: -100px;
+        }
     </style>
 </body>
 </html>
