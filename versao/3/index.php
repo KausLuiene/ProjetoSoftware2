@@ -86,10 +86,12 @@
         #quadro{
             background-image: url(https://i.stack.imgur.com/pMAiU.jpg);
         }
-        /* #indicators{
-            top: 100px !important;
-            height: 100px;
-        } */
+.carousel-control-prev{
+    left: -100px;
+}
+.carousel-control-next{
+    right: -100px;
+}
     </style>
 </body>
 </html>
