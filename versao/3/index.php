@@ -17,9 +17,6 @@
     <div class="container">
         <div class=" w-100 d-flex justify-content-between align-items-center">
             <h4 class="m-0">Alfabetiza Junto</h4>
-            <p class="m-0">Está em busca de conhecimento sobre Alfabetização?
-                <strong>Veio no lugar certo.</strong>
-            </p>
         </div> 
     </div>
 </nav>
@@ -73,6 +70,29 @@
         });
 
 
+    </script>
+
+<script>
+    function notificarFrase() {
+      let options = { method: 'GET' };
+      fetch('https://spreadsheets.google.com/feeds/list/1wlq5rZEfXLtSDsAEvPAur9Oos0zBK3MVm3fODGppQUA/od6/public/values?alt=json', options)
+        .then(response => { 
+          return response.json()
+        })
+        .then(data => { 
+          let frases = data.feed.entry;
+          let fraseDoDia = frases[parseInt((Date.now() / 86400) % frases.length)].gsx$post.$t;
+          if (Notification.permission === "granted") {
+            let notification = new Notification(fraseDoDia);
+          }
+        });
+    }
+
+       notificarFrase();
+       if(Notification in navigator){
+         Notification.requirePermission();
+        }
+        
     </script>
     
     <style type="text/css">
