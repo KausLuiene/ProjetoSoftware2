@@ -25,10 +25,6 @@
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark text-white">
     <div class="container">
         <div class=" w-100 d-flex justify-content-between align-items-center">
-            <h4 class="m-0">Alfabetiza Junto</h4>
-            <p class="m-0"> Está em busca de conhecimento sobre Alfabetização?
-                <strong> Aqui é o lugar certo.</strong>
-            </p>
         </div> 
     </div>
 </nav>
