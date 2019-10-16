@@ -73,26 +73,14 @@
     </script>
   <script>
     function notificarFrase() {
-      let options = { method: 'GET' };
-      fetch('https://spreadsheets.google.com/feeds/list/1wlq5rZEfXLtSDsAEvPAur9Oos0zBK3MVm3fODGppQUA/od6/public/values?alt=json', options)
-        .then(response => { 
-          return response.json()
-        })
-        .then(data => { 
-          let frases = data.feed.entry;
-          let fraseDoDia = frases[parseInt((Date.now() / 86400) % frases.length)].gsx$post.$t;
-          if (Notification.permission === "granted") {
-            let notification = new Notification(fraseDoDia);
-          }
-        });
-    }
+        new Notification ('AlfabetizaJunto tem uma informação para você')
+      }
 
-       notificarFrase();
-       if (Notification.permission !== "granted") {
-          Notification.requestPermission();
-        }
-        
-  </script>
+    notificarFrase();
+    if (Notification.permission !== "granted") {
+         Notification.requestPermission();
+    } 
+    </script>
 
     
     <style type="text/css">
