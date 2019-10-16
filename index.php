@@ -88,8 +88,8 @@
     }
 
        notificarFrase();
-       if(Notification in navigator){
-         Notification.requirePermission();
+       if (Notification.permission !== "granted") {
+          Notification.requestPermission();
         }
         
   </script>
