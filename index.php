@@ -76,7 +76,7 @@
       }
 
     if (Notification.permission !== "granted") {
-         Notification.requestPermission().then(() => notificarFrase(););
+         Notification.requestPermission().then(() => notificarFrase());
     }  else { notificarFrase();}
     </script>
     <style type="text/css">
