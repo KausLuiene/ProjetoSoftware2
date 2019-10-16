@@ -67,6 +67,9 @@
 
             });
         });
+
+ </script>
+    
 <script>
     function notificarFrase() {
         new Notification ('AlfabetizaJunto tem uma nova informação para você')
@@ -76,9 +79,6 @@
          Notification.requestPermission().then(() => notificarFrase(););
     }  else { notificarFrase();}
     </script>
-
-    </script>
-    
     <style type="text/css">
         body{
             font-family: 'Mansalva', cursive;
