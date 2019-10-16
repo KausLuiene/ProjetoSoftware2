@@ -16,7 +16,7 @@
 <nav class="navbar navbar-expand-lg navbar-black bg-dark text-white">
     <div class="container">
         <div class=" w-100 d-flex justify-content-between align-items-center">
-          <h4 class="m-0">Alfabetiza Junto</h>
+          <h4 class="m-0">Alfabetiza Junto</h4>
         </div> 
     </div>
 </nav>
