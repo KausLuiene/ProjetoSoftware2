@@ -11,9 +11,6 @@
   </head>
 
 <body>
-  <h1>Alfabetiza Junto</h1>
-  <p> <em> Está em busca de conhecimento sobre Alfabetização? <em> <br/> <strong> Aqui é o lugar certo.</strong> </p>
-
   	<div id="frases"> <!--elemento div onde as frases vão ser inseridas-->
 
 	  </div>
