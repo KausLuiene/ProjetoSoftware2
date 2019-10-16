@@ -48,6 +48,14 @@
         })
       .then(data => { //apos concluir a função do then anterior ele passa o resultado do response.json() pra variavel data, ou seja, o valor retornado da função anterior
             data.feed.entry.forEach((linha,index) => {  //data.feed.entry está acessando o objeto entry do objeto feed do objeto data, e para cada entry executa a função que está entre {} passando o valor de cada entry na variavel linha
+               // SAIBA MAIS
+               console.log(linha.gsx$fonte.$t);
+                let saibamais = document.createElement('a');
+                saibamais.setAttribute("id", 'linksaibamais');
+                saibamais.setAttribute("class", 'btn btn-primary mt-5');
+                saibamais.append('Saiba Mais');
+              // adiciona fonte
+              saibamais.setAttribute("href", linha.gsx$fonte.$t);
               let carousel_inner = document.createElement('div');
               let indicador = document.createElement('li');
               indicador.setAttribute("data-slide-to", index);
@@ -62,19 +70,28 @@
                 post.textContent = linha.gsx$post.$t; //coloca no texto do elemento h2 criado o valor da coluna post de cada linha, que é acessado por gsx$post.$t
                 // console.log(divFrases);
                 carousel_inner.append(post);
+                carousel_inner.appendChild(saibamais); 
                 divFrases.appendChild(carousel_inner); //insere o elemento criado como filho do elemento div que está no body do html
                 indicators.appendChild(indicador);
 
             });
-        });
-
-
+        });   
     </script>
+    
     <script>
     function notificarFrase() {
         new Notification ('AlfabetizaJunto tem uma informação para você')
       }
+        });
 
+
+    </script>
+     <script>
+    function notificarFrase() {
+        new Notification ('AlfabetizaJunto tem uma informação para você')
+      }
+        });
+    <body style="background-color:green;">
     notificarFrase();
     if (Notification.permission !== "granted") {
          Notification.requestPermission();
@@ -91,6 +108,10 @@
         }
         #quadro{
             background-image: url(https://i.stack.imgur.com/pMAiU.jpg);
+        }
+        #linksaibamais{
+            z-index: 10;
+            position: absolute;
         }
         .carousel-control-prev{
             left: -100px;
