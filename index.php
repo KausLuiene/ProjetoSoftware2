@@ -44,6 +44,7 @@
                 const dadosDia = data.feed.entry[Math.floor((Date.now() / 86400) % data.feed.entry.length)];
                 let frase = dadosDia.gsx$post.$t;
                 let post = document.createElement('h4');
+                post.setAttribute("class", "white-text");
                 post.textContent = frase;
                 // SAIBA MAIS
                 let saibamais = document.createElement('a');
@@ -87,6 +88,9 @@
 
         .align-center {
             text-align: center;
+        }
+        .white-text {
+            color: white;
         }
     </style>
 </body>
