@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
+ 
 <head>
   <meta charset="utf-8" />
   <title>AlfabetizaJunto</title>
@@ -11,7 +11,7 @@
   <link href="https://fonts.googleapis.com/css?family=Mansalva&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 </head>
-
+ 
 <body class="h-100">
 <nav class="navbar navbar-expand-lg navbar-black bg-dark text-white">
     <div class="container">
@@ -48,12 +48,11 @@
         })
       .then(data => { //apos concluir a função do then anterior ele passa o resultado do response.json() pra variavel data, ou seja, o valor retornado da função anterior
             data.feed.entry.forEach((linha,index) => {  //data.feed.entry está acessando o objeto entry do objeto feed do objeto data, e para cada entry executa a função que está entre {} passando o valor de cada entry na variavel linha
-             // SAIBA MAIS
-               console.log(linha.gsx$fonte.$t);
-                let saibamais = document.createElement('a');
-                saibamais.setAttribute("id", 'linksaibamais');
-                saibamais.setAttribute("class", 'btn btn-primary mt-5');
-                saibamais.append('Saiba Mais');
+            // SAIBA MAIS
+              let saibamais = document.createElement('a');
+              saibamais.setAttribute("id", 'linksaibamais');
+              saibamais.setAttribute("class", 'btn btn-primary mt-5');
+              saibamais.append('Saiba Mais');
               // adiciona fonte
               saibamais.setAttribute("href", linha.gsx$fonte.$t);
               let carousel_inner = document.createElement('div');
@@ -61,10 +60,10 @@
               indicador.setAttribute("data-slide-to", index);
               indicador.setAttribute("data-target", "#carouselSite");
               if(index == 0){
-                carousel_inner.setAttribute("class", "carousel-item active");
+                carousel_inner.setAttribute("class", "carousel-item active align-center");
                 indicador.setAttribute("class", "active");
             } else{
-                carousel_inner.setAttribute("class", "carousel-item");
+                carousel_inner.setAttribute("class", "carousel-item align-center");
             }
                 let post = document.createElement('h4'); //cria um elemento html 'h2' 
                 post.textContent = linha.gsx$post.$t; //coloca no texto do elemento h2 criado o valor da coluna post de cada linha, que é acessado por gsx$post.$t
@@ -73,22 +72,22 @@
                 carousel_inner.appendChild(saibamais);
                 divFrases.appendChild(carousel_inner); //insere o elemento criado como filho do elemento div que está no body do html
                 indicators.appendChild(indicador);
-
+ 
             });
         });
-
+ 
  </script>
-    
- <script>
+     
+<script>
     function notificarFrase() {
-        new Notification ('AlfabetizaJunto tem uma informação para você')
+        new Notification ('AlfabetizaJunto tem uma nova informação para você')
       }
-        });
-    <body style="background-color:green;">
-    notificarFrase();
+ 
     if (Notification.permission !== "granted") {
-         Notification.requestPermission();
-    } 
+         Notification.requestPermission().then(() => notificarFrase());
+    }  else { 
+      notificarFrase();
+    }
     </script>
     <style type="text/css">
         body{
@@ -101,9 +100,8 @@
         #quadro{
             background-image: url(https://i.stack.imgur.com/pMAiU.jpg);
         }
-      #linksaibamais{
-            z-index: 10;
-            position: absolute;
+        .align-center{
+            text-align: center;
         }
         .carousel-control-prev{
             left: -100px;
