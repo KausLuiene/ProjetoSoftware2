@@ -41,7 +41,7 @@
                 return response.json() //essa função só retorna a resposta como json
             })
             .then(data => { //apos concluir a função do then anterior ele passa o resultado do response.json() pra variavel data, ou seja, o valor retornado da função anterior
-                const dadosDia = data.feed.entry[Math.floor((Date.now() / 86400) % data.feed.entry.length)];
+                const dadosDia = data.feed.entry[Math.floor((Date.now() / 86400000)) % data.feed.entry.length];    
                 let frase = dadosDia.gsx$post.$t;
                 let post = document.createElement('h4');
                 post.setAttribute("class", "white-text");
